@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SK-Placements | {% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="static/css/myhome.css">
+    {% block linkcss %}{% endblock linkcss %}
+</head>
+<body>
+    <div class="container">
+        <div class="signmodal" id="modal">
+            <h1 class="signmodal-title">Hello User <br> Please Sign in</h1>
+            <div class="mainform">
+
+                <form action="#">
+                    <div class="loginform" id="loginform">
+                        <!--<div class="signup">
+                            <label for="name"></label>
+                            <input type="text" name="name" id="name">
+                        </div>-->
+                        <label for="name">Email or Phone</label>
+                        <input type="email" name="email" id="email" >
+                        <label for="password"
+                            id="passwordtxt">Password</label>
+                        <input type="text" name="password" id="password">
+                        <a href="#" id="forgotpassword">Forgot Password ? </a>
+                        <button id="modalformbtn">Sign in</button>
+                        <small>If you don't have registered yet <a href="/register" id="signupbtn" >Click here</a></small>
+
+                    </div>
+                </form>
+            </div>
+
+            <div class=" headpos">
+                <img src="static/images/Official_LOGO.jpg" alt="">
+                <h1>SK- Placements</h1>
+            </div>
+            <button id="modalbtn"><img src="static/images/icons8-close-30.png" alt=""></button>
+        </div>
+
+        <div class="navbar">
+            <div class="Heading">
+                <h1>SK-Placements</h1>
+            </div>
+            <div class="navs">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/infocomp">Companies</a>
+
+                </li>
+                <li>
+                    <a href="/aboutus">About</a>
+
+                </li>
+                <li>
+                    <a href="#">Community</a>
+
+                </li>
+                <li>
+                    <a href="/register" style="    border: none;"><button class="btn1" id="btn1">Join now</button></a><span class="sep">|</span><button class="btn2"
+                        id="btn2">Sign
+                        in</button>
+                </li>
+            </div>
+        </div>
+        {% block body %}{% endblock body %}
+    </div>
+    <script src = "static/js/main.js"></script>
+</body>
+</html>
